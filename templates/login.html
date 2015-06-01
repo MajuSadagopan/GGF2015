@@ -1,0 +1,21 @@
+{% extends "alpha.html" %}
+	{% block content %}
+		<span>{{error}}</span>
+		<span>{{gen_passhash}}</span>
+		<span>{{stored_passhash}}</span>
+		<form method="Post">
+			<label>
+				Username
+				<input type="text" name="username">
+			</label>
+			<span> {{sumbission}} </span>
+			<br>
+			<label>
+				Password
+				<input type="text" name="password">
+			</label>
+			<input type="hidden" name="nexturl" value={{nexturl}}>
+			<br>
+			<input type="submit">
+		</form>
+	{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "alpha.html" %}
+	{% block content %}
+		<div>
+			<p>{{category_catalogue}}</p>
+			<div>
+				{% for i in category_catalogue %}
+					<div>
+						<img src={{category_catalogue[i]['categoryPicture']}}>
+						<p>{{category_catalogue[i]['categoryDesc']}}</p>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	{% endblock %}

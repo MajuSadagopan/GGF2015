@@ -1,0 +1,18 @@
+{% extends "alpha.html" %}
+	{% block content %}
+		{% for i in range(order|length) %}
+		<br>
+			<div><span>{{order[i]}}</span> <b>| Post |</b> <span>{{wikipost[order[i]][0][:200]}}...</span><span> by: {{wikipost[order[i]][1]}}</span></div> 
+			<div>
+				<form class="button" method="post">
+					<input name="post" type="hidden" value={{i}}>
+					<input type="submit" value="edit">
+				</form>
+				<form class="button" method="post">
+					<input name="view" type="hidden" value={{i}}>
+					<input type="submit" value="view">
+				</form>
+			</div>
+		<br>
+		{% endfor %}
+	{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "alpha.html" %}
+	{% block content %}
+		{% if pagetype == "products" %}
+			{% for p in content%}
+			<div class = "tilediv">
+				<a class="desc" href={{'/product/'+p}}>
+					<img class="tile" src={{content[p]['productImage']}}>
+				</a>
+			</div>
+			{% endfor %}
+		{% elif pagetype == "stores" %}
+			{% for s in content%}
+			<div class = "tilediv">
+				<a class="desc" href={{'/store/'+s}}>
+					<img class="tile" src={{content[s]['storeLogo']}}>
+				</a>
+			</div>
+			{% endfor %}
+		{% elif pagetype == "categories" %}
+			{% for c in content%}
+			<div class = "tilediv">
+				<img class="tile" src={{content[c]['categoryPicture']}}>
+			</div>
+			{% endfor %}
+		{% else %}
+			<h1>JAM</h1>
+		{% endif %}
+
+
+	{% endblock %}

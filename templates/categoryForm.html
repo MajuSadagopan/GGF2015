@@ -1,0 +1,25 @@
+{% extends "alpha.html" %}
+	{% block content %}
+		<form method="post" id="store">
+			<label>
+				Product Name: 
+				<input type="text" name="catname" value={{storename}}>
+				<span>{{e_storename}}</span>
+			</label>
+			<br>
+			<label>
+				Store Logo (Img URL): 
+				<input type="text" name="catimage" value={{storelogo}}>
+				<span>{{e_storelogo}}</span>
+			</label>
+			<br>
+			<label>
+				Description:
+				<br> 
+				<textarea rows="4" cols="50" name="catdesc" value={{proddesc}}></textarea>
+				<span>{{e_storedesc}}</span>
+			</label>
+			<br>
+			<input type="submit">
+		</form>
+	{% endblock %}

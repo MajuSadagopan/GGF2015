@@ -1,0 +1,20 @@
+{% extends "alpha.html" %}
+	{% block content %}
+		<h1>Assign Store Owners</h1>
+		<form method="post">
+			
+			Owner:
+			<br>
+			<select name="owner" value={{storeowner}}>
+				{% for u in users %}
+					<option> {{u}} </option>
+				{% endfor %}
+			</select>
+
+			<br>
+			<br>
+			<input type="submit">
+		</form>
+
+
+	{% endblock %}

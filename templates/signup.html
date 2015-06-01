@@ -1,0 +1,26 @@
+{% extends "alpha.html" %}
+	{% block content %}
+		<form method="post">
+			<label>
+				Username: 
+				<input type="text" name="username" value={{username}}>
+				<span>{{e_username}}</span>
+			</label>
+			<br>
+			<label>
+				Password: 
+				<input type="text" name="password">
+				<span>{{e_password}}</span>
+			</label>
+			<br>
+			<label>
+				Verify: 
+				<input type="text" name="verify">
+				<span>{{e_verify}}</span>
+			</label>
+			<br>
+			<input type="hidden" name="nexturl" value={{nexturl}}>
+			<br>
+			<input type="submit">
+		</form>
+	{% endblock %}

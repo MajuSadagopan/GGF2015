@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+	<html> 
+		<head>
+			<link type="text/css" rel="stylesheet" href="/static/main.css" />
+			<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+
+			<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+			<title>GGFinder</title>
+		</head>
+		<body>
+			<div id='mainPanel'>
+
+				<a href="/" class='noMargin'>
+					<img class='logo' src="/pics/ggfCrest.png">
+				</a>
+
+				<div class="nav">
+
+					<div class="navdiv left">
+						<a href="">Create:</a>
+						<a href="/productform">Products</a> 
+						<a href="/storeform">Stores</a>
+						<a href="/categoryform">Categories</a>
+					</div> 
+
+					<div class = "navdiv right">
+						<a href="/catalogue/products">Products</a> 
+						<a href="/catalogue/stores">Stores</a>
+						<a href="/catalogue/categories">Categories</a>
+						<a href="/signup">Signup/Login</a>
+					</div>
+					
+					
+					
+				</div>
+			
+				<div id="mainContent">
+					<img class='banner' src="https://lh3.googleusercontent.com/-Vq5M-FrvAkQ/UaQrflHlykI/AAAAAAAAAcs/370p3eROuJc/w1286-h857-no/DSC_0169.jpg">
+					{% block content %}
+					{% endblock %}
+				</div>
+			</div>
+		</body>
+	</html>

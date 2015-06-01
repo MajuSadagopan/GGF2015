@@ -1,0 +1,41 @@
+{% extends "alpha.html" %}
+	{% block content %}
+		<form method="post" id="store">
+			<label>
+				Store Name: 
+				<input type="text" name="storename" value={{storename}}>
+				<span>{{e_storename}}</span>
+			</label>
+			<br>
+			<label>
+				Store Logo (Img URL): 
+				<input type="text" name="storeLogo" value={{storelogo}}>
+				<span>{{e_storelogo}}</span>
+			</label>
+			<br>
+			<label>
+				Location: 
+				<input type="text" name="location" value={{storelocation}}>
+				<span>{{e_location}}</span>
+			</label>
+			<br>
+			<label>
+				Description:
+				<br> 
+				<textarea rows="4" cols="50" name="storedesc" value={{storedesc}}></textarea>
+				<span>{{e_storedesc}}</span>
+			</label>
+			<br>
+			Owner:
+			<br>
+			<select name="owner" value={{storeowner}}>
+					<option> {{user}} </option>
+			</select>
+
+			<br>
+			<br>
+			<input type="submit">
+		</form>
+
+
+	{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "alpha.html" %}
+	{% block content %}
+	<h2> Create new wiki</h2>
+	<form method="post">
+		<label>
+			Content
+			<br>
+			<textarea rows="20" cols="70" name="content">{{body}}</textarea>
+		</label>
+		<br>
+		<input type="submit">
+	</form>
+	<span> {{error}} </span>
+	{% endblock %}

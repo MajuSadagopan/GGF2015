@@ -1,0 +1,37 @@
+{% extends "alpha.html" %}
+	{% block content %}
+		
+		
+		<h1> Products </h1>
+		<div>
+			{% for p in products %}
+				<div class = "tilediv">
+					<a class="desc" href={{'/product/'+p}}>
+						<img class="tile" src={{products[p]['productImage']}}>
+					</a>
+				</div>
+			{% endfor %}
+		</div>
+		
+		<h1> Stores </h1>
+		<div>
+			{% for s in stores %}
+				<div class = "tilediv">
+					<a class="desc" href={{'/store/'+s}}>
+						<img class="tile" src={{stores[s]['storeLogo']}}>
+					</a>
+				</div>
+			{% endfor %}
+		
+		
+		<h1> Categories </h1>
+		<div>
+			{% for c in categories %}
+				<div class = "tilediv">
+					<img class="tile" src={{categories[c]['categoryPicture']}}>	
+				</div>
+			{% endfor %}
+		</div>
+		
+
+	{% endblock %}
