@@ -489,7 +489,7 @@ class productPage(BaseClass):
 		product = check_cache(productbase(), product_name)
 		
 		if product:
-			store = check_cache(storebase(), product['productStore'])
+			store = check_cache(storebase(), product['productStore'][0])
 			
 			self.render("productpage.html", Name = product_name, image = product['productImage'], store = product['productStore'], price = product['productPrice'], desc = product['productDesc'], location = store['storeLocation'])
 		else:
